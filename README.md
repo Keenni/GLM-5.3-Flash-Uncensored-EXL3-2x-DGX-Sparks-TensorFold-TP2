@@ -28,6 +28,10 @@ both our TP2 and TP4 lines, all patches baked in — no bind-mount overlays):
 - **A working 2-rank NCCL configuration over a direct CX7 link** (two HCAs per node, the patched
   ring-only build, the exact env set and the checks that find a wrong leg before the boot hangs):
   [`docs/nccl-2rank-direct.md`](docs/nccl-2rank-direct.md).
+- **The spill tier never wrote a byte in `--parallel` mode** — upstream #423 wired disk spill and
+  disk-resume into the single-stream engine only; the multi-stream scheduler's evictions silently
+  discarded kept prompts (0 bytes written in 30 h while 42k–220k-token conversations ate 27–211 s full
+  re-prefills). Wired in two overlay files, both stacks: [`docs/spill-parallel-wiring.md`](docs/spill-parallel-wiring.md).
 
 ## Credits and provenance
 
