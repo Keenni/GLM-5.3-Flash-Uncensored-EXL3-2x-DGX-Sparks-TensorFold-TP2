@@ -1,7 +1,8 @@
 <h1 align="center">GLM-5.3-Flash Uncensored EXL3 on 2× DGX Spark — TensorFold TP2, unified v0.6.7</h1>
 
 <p align="center">
-  <sub>Two-rank TensorFold on a direct ConnectX-7 link: the v0.6.7 unified image, a root-caused and
+  <sub>English | <a href="README.zh-CN.md">简体中文</a><br><br>
+  Two-rank TensorFold on a direct ConnectX-7 link: the v0.6.7 unified image, a root-caused and
   bit-exact row-split fix, RoCE all-gathers for decode, and per-step latency instrumentation.
   Companion to our <a href="https://github.com/Keenni/GLM-5.3-Flash-Uncensored-EXL3-4x-DGX-Sparks-TensorFold-TP4">4× Spark TP4 repository</a>.</sub>
 </p>
